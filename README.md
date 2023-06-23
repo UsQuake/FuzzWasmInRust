@@ -1,5 +1,5 @@
 
-  # JSEngine을 Rust 코드에 내장하는 컨닝 페이퍼(나만 볼꺼얌 >~<)
+  # JSEngine을 Rust 코드에 (나만 볼꺼얌 >~<)
   ## V8
   - rusty_v8 모듈을 사용하세요!
   - 구글에서 C++로 작성된 v8 미리 빌드한 단일 라이브러리를 Rust로 FFI해서 쓸 수 있게 해놨습니다.(a.k.a v8monolith.a, v8_monolith.lib)
