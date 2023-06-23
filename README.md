@@ -20,5 +20,5 @@
   - JavascriptCore는 WebKit/Safari,
   - 그리고 최근에 핫한 Bun.JS 런타임에 내장된 JS Engine입니다.
   - WebKit 안에 내장 되어 있어 있기에 WebKit 라이브러리가 있다면사용할 수 있습니다. 
-  - 저는 그래서 GLib, GTK에 FFI하는 [javascriptcore-rs](https://github.com/servo/mozjs](https://github.com/tauri-apps/javascriptcore-rs/tree/crat)를 이용하고 있습니다.
+  - 저는 그래서 GLib, GTK에 FFI하는 [javascriptcore-rs](https://github.com/tauri-apps/javascriptcore-rs/tree/crat)를 이용하고 있습니다.
   - 우분투의 경우는 apt-get install libjavascriptcoregtk-4.1-dev gir1.2-webkit2-4.1가 필요합니다.
