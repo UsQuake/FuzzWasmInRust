@@ -15,6 +15,7 @@
   - 리눅스 빌드의 경우에 clang은 요새 14버전이 나오고 있고,
   - export LIBCLANG_PATH=/usr/lib/clang/4.0/lib 보다는 X86 우분투22 기준으로 export LIBCLANG_PATH=/usr/lib/x86_64-linux-gnu/ 가 맞습니다.
   - 또한 llvm도 같이 설치 되어 있어야 하는 거 같습니다.
+  - export AFL_PATH="/root/AFLplusplus" AFL_LLVM_INSTRUMENT="CLASSIC" CC="afl-clang-fast" CXX="afl-clang-fast++" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -L/opt/experiment/wasm/mozjs/mozjs"
   
   ## JavascriptCore
   - JavascriptCore는 WebKit/Safari,
