@@ -1,12 +1,45 @@
 
-  # JSEngine을 Rust 코드에 (나만 볼꺼얌 >~<)
-  ## V8
-  - rusty_v8 모듈을 사용하세요!
+  # Embed AFL++(LLVM_CLASSIC mode) instrumented javascript engine in rust code.
+
+  ## Supported environment
+  
+  - Now, x86 Ubuntu-22.02 only.
+    
+  - We will support more environment after research experiment is done.
+  
+  - Even though WSL is unsupported.
+    * Because of linux file-system is different per environment.
+  
+  ## 1. Set AFL++.
+
+  - For support AFL++ LLVM mode, get both llvm-15 and llvm-15-tools.
+    + `apt-get install -y llvm-15 llvm-15-tools`
+    + Why use 15? 
+      * Because llvm-15 is current version of llvm in Ubuntu-22.0.2 and you can use amazing features of AFL++ with current llvm.
+    + If new version of llvm is coming out, You can consider new version. 
+    
+  - Clone *AFL++* into your Unix-based system.
+     + `cd path_to_clone`
+     + `git clone https://github.com/AFLplusplus/AFLplusplus.git`
+
+  - Compile AFL++ with llvm-*INSTALL-VERSION*.
+     + For an example, I installed llvm-15 & llvm-15-tools and I'll use them.
+     + `cd path_to_clone/AFLplusplus`
+     + `export LLVM_CONFIG=llvm-config-15`
+     + `make distrib`
+      
+  - Install compiled AFL++ with root permission.
+     + `sudo make install`
+
+  ## 2. Set Rust FFI of each js engine.
+  
+  ### V8
+  - ```git clone AFL++```
   - 구글에서 C++로 작성된 v8 미리 빌드한 단일 라이브러리를 Rust로 FFI해서 쓸 수 있게 해놨습니다.(a.k.a v8monolith.a, v8_monolith.lib)
   - 여담으로, 이 프로젝트가 인기가 많고 유지가 잘 되는 이유는 Node.js의 차기작인 Deno 프로젝트가 Rust로 작성되서
   - V8 엔진을 Rust 코드에서 불러와야 했기에 관리가 잘 되어 있습니다.(외쳐! 구글갓!)
 
-  ## SpiderMonkey
+  ### SpiderMonkey
   - Rust는 원래 모질라 재단에서 Servo 브라우저를 만들기 위해 나왔습니다.
   - 그래서 Rust 기반으로 작성된 Servo에 C++로 만든 JSEngine인 SpiderMonkey를 추가하기 위해
   - C++ JS Engine인 SpiderMonkey를 Rust코드와 통합할 수 있도록 자체적으로 MozJS라는 프로젝트를 통해 관리하고 있습니다.
@@ -17,7 +50,7 @@
   - 또한 llvm도 같이 설치 되어 있어야 하는 거 같습니다.
   - export AFL_PATH="/root/AFLplusplus" AFL_LLVM_INSTRUMENT="CLASSIC" CC="afl-clang-fast" CXX="afl-clang-fast++" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -L/opt/experiment/wasm/mozjs/mozjs"
   
-  ## JavascriptCore
+  ### JavascriptCore
   - JavascriptCore는 WebKit/Safari,
   - 그리고 최근에 핫한 Bun.JS 런타임에 내장된 JS Engine입니다.
   - WebKit 안에 내장 되어 있어 있기에 WebKit 라이브러리가 있다면사용할 수 있습니다. 
