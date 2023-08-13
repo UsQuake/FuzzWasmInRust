@@ -66,7 +66,7 @@
 
   - Edit build script not to instrument glue code for rust to c++.
      + `cd path_to_clone/mozjs/rust-mozjs`
-     + Under 15th line, add follow line.
+     + Under 15th line in *build.rs*, add follow line.
      + `.compile(clang++-15)`
     
   ### Case JavascriptCore:
@@ -80,18 +80,12 @@
      + `git clone https://github.com/WebKit/WebKit.git`
    
   - Edit build script.
-     + Edit makefile for building C++ code.
-     + `vi makefile.cargo`
-     + Under 55th line, add follow option. *path_to_python* is path to python binary.
+    
+     + Under 55th line in *makefile.cargo*, add follow option. (*path_to_python* is path to python binary.)
      + `-DPython_EXECUTABLE=path_to_python`
-     + Save makefile.cargo.
-     + ESC + `:wq`
-     + Edit build.rs for building rust code.
-     + `vi build.rs`
-     + Under 103th line, add follow option.
+
+     + Under 103th line in *build.rs*, add follow option.
      + `println!("cargo:rustc-link-lib=atomic");`
-     + Save build.rs.
-     + ESC + `:wq`
        
   ## 3. Set build option and build driver.
   
@@ -100,12 +94,12 @@
     - `export AFL_PATH="path_to_clone/AFLplusplus" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone/AFLplusplus"`
 
   ### V8
-     - Python3 is must be installed, and set installed python binary path in PYTHON environment table.
-     - `export CLANG_BASE_PATH="/usr/local" V8_FROM_SOURCE=1 PYTHON="/path/to/python3"`
+    - *path_to_python3* is path to Python3 executable.
+    - `export CLANG_BASE_PATH="/usr/local" V8_FROM_SOURCE=1 PYTHON="path_to_python3"`
 
   ### MozJS
-     - /usr/lib/x86_64-linux-gnu is path of libclang-version.so in Ubuntu-X86.
+    - /usr/lib/x86_64-linux-gnu is path of libclang-version.so in Ubuntu-X86.
      - `export CC="afl-clang-fast" CXX="afl-clang-fast++" LIBCLANG_PATH=/usr/lib/x86_64-linux-gnu`  
      
   ### JSC
-     - Nothing to do. because, we already edit the makefile.
+    - Nothing to do. because, we already edit the makefile.
