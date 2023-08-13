@@ -91,16 +91,14 @@
   ### Common options.
     - path_to_clone is path to clone AFLplusplus.
     - `export AFL_PATH="path_to_clone/AFLplusplus" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone/AFLplusplus"`
-      
-  ### Set JS engine specific options
 
-  #### V8
+  ### V8
      - Python3 is must be installed, and set installed python binary path in PYTHON environment table.
      - `export CLANG_BASE_PATH="/usr/local" V8_FROM_SOURCE=1 PYTHON="/path/to/python3"`
 
-  #### MozJS
+  ### MozJS
      - /usr/lib/x86_64-linux-gnu is path of libclang-version.so.
      - `export CC="afl-clang-fast" CXX="afl-clang-fast++" LIBCLANG_PATH=/usr/lib/x86_64-linux-gnu`  
      
-  #### JSC
+  ### JSC
      - Nothing to do. because, we already edit the makefile.
