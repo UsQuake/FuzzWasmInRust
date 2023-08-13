@@ -91,8 +91,8 @@
   
   ### Common options.
   
-  - path_to_clone is path to clone AFLplusplus.
-  - `export AFL_PATH="path_to_clone/AFLplusplus" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone/AFLplusplus"`
+  - *path_to_clone_AFL++* is path to clone AFLplusplus.
+  - `export AFL_PATH="path_to_clone_AFL++" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone_AFL++"`
 
   ### V8
   
