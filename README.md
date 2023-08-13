@@ -80,12 +80,19 @@
      + `git clone https://github.com/WebKit/WebKit.git`
    
   - Edit build script.
+     + Edit makefile for building C++ code.
      + `vi makefile.cargo`
-     + Under 55th line, add follow option.
-     + `-DPython_EXECUTABLE=/usr/bin/python`
-     + 
-     + `-DPython_EXECUTABLE=/usr/bin/python`
-
+     + Under 55th line, add follow option. *path_to_python* is path to python binary.
+     + `-DPython_EXECUTABLE=path_to_python`
+     + Save makefile.cargo.
+     + ESC + `:wq`
+     + Edit build.rs for building rust code.
+     + `vi build.rs`
+     + Under 103th line, add follow option.
+     + `println!("cargo:rustc-link-lib=atomic");`
+     + Save build.rs.
+     + ESC + `:wq`
+       
   ## 3. Set build option and build driver.
   
   ### Common options.
@@ -97,7 +104,7 @@
      - `export CLANG_BASE_PATH="/usr/local" V8_FROM_SOURCE=1 PYTHON="/path/to/python3"`
 
   ### MozJS
-     - /usr/lib/x86_64-linux-gnu is path of libclang-version.so.
+     - /usr/lib/x86_64-linux-gnu is path of libclang-version.so in Ubuntu-X86.
      - `export CC="afl-clang-fast" CXX="afl-clang-fast++" LIBCLANG_PATH=/usr/lib/x86_64-linux-gnu`  
      
   ### JSC
