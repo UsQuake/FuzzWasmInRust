@@ -91,18 +91,19 @@
   
   ### Common options.
   
-    - path_to_clone is path to clone AFLplusplus.
-    - `export AFL_PATH="path_to_clone/AFLplusplus" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone/AFLplusplus"`
+  - path_to_clone is path to clone AFLplusplus.
+  - `export AFL_PATH="path_to_clone/AFLplusplus" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone/AFLplusplus"`
 
   ### V8
   
-    - *path_to_python3* is path to Python3 executable.
-    - `export CLANG_BASE_PATH="/usr/local" V8_FROM_SOURCE=1 PYTHON="path_to_python3"`
+  - *path_to_python3* is path to Python3 executable.
+  - `export CLANG_BASE_PATH="/usr/local" V8_FROM_SOURCE=1 PYTHON="path_to_python3"`
 
   ### MozJS
   
-    - /usr/lib/x86_64-linux-gnu is path of libclang-version.so in Ubuntu-X86.
-     - `export CC="afl-clang-fast" CXX="afl-clang-fast++" LIBCLANG_PATH=/usr/lib/x86_64-linux-gnu`  
+  - /usr/lib/x86_64-linux-gnu is path of libclang-version.so in Ubuntu-X86.
+  - `export CC="afl-clang-fast" CXX="afl-clang-fast++" LIBCLANG_PATH=/usr/lib/x86_64-linux-gnu`  
      
   ### JSC
-    - Nothing to do. because, we already edit the makefile.
+  
+  - Nothing to do. because, we already edit the makefile.
