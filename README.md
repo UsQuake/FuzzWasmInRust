@@ -126,6 +126,9 @@
      + Add follow line in *Cargo.toml* under '[dependencies]'.
      + ```v8 = {path ="path_to_clone_rusty_v8"}```
      + *path_to_clone_rusty_v8* is path to cloned & customed rusty v8.
+
+  - Finally, build runner.
+     + `cargo build`
        
  ### SpiderMonkey sample runner
   
@@ -142,7 +145,10 @@
        mozjs_sys = { path = "path_to_clone_mozjs/mozjs" }
        ```
      + *path_to_clone_mozjs* is path to cloned & customed mozjs.
-      
+       
+  - Finally, build runner.
+     + `cargo build`
+         
  ### JSC runner
   
   - Clone *jsc-integ* which is an sample runner.
@@ -157,3 +163,6 @@
        url = "2.4.0"
        ```
      + *path_to_clone_jsc_sys* is path to cloned & customed jsc_sys.
+
+   - Finally, build runner.
+     + `cargo build`
