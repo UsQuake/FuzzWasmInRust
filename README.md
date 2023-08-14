@@ -49,7 +49,7 @@
        
   ## 2. Install and set build environment to build JS engine.
   
-  ### Case V8:
+  ### V8
   
   - Clone *rusty_v8* which is an Rust-FFI of v8 static library.
      + `cd path_to_clone`
@@ -58,7 +58,7 @@
   - Install build dependencies.
      + `sudo apt install -y libglib2.0-dev`
 
-  ### Case SpiderMonkey:
+  ### SpiderMonkey
   
   - Clone *mozjs* which is an Rust-FFI of SpiderMonkey static library.
      + `cd path_to_clone`
@@ -69,7 +69,7 @@
      + Under 15th line in *build.rs*, add follow line.
      + `.compile(clang++-15)`
     
-  ### Case JavascriptCore:
+  ### JavascriptCore
   
   - Clone *jsc-sys* which is an Rust-FFI of jsc static library.
      + `cd path_to_clone`
@@ -107,3 +107,28 @@
   ### JSC
   
   - Nothing to do. because, we already edit the makefile.
+
+ ## 4. Clone and build own runners
+
+ ### Write your own runner
+
+ - If you want to write own runner,
+ - Edit *Cargo.toml* of each runner to use your custom build of rusty JS engines.
+     
+ ### V8 sample runner
+  
+  - Clone *v8-integ* which is an sample runner.
+     + `cd path_to_clone`
+     + `git clone https://github.com/UsQuake/v8_integ.git`
+       
+ ### SpiderMonkey sample runner
+  
+  - Clone *mozjs-integ* which is an sample runner.
+     + `cd path_to_clone`
+     + `git clone https://github.com/UsQuake/mozjs_integ.git`
+       
+ ### JSC runner
+  
+  - Clone *jsc-integ* which is an sample runner.
+     + `cd path_to_clone`
+     + `git clone https://github.com/UsQuake/jsc_integ.git`
