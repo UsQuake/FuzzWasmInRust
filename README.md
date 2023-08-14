@@ -87,7 +87,7 @@
      + Under 103th line in *build.rs*, add follow option.
      + `println!("cargo:rustc-link-lib=atomic");`
        
-  ## 3. Set build option and build driver.
+  ## 3. Set build option.
   
   ### Common options.
   
