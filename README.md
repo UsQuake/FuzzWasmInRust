@@ -124,7 +124,7 @@
   - Edit *Cargo.toml* to use custom build patch.
      + `cd path_to_clone/v8_integ`
      + Add follow line in *Cargo.toml* under '[dependencies]'.
-     + `v8 = {path ="path_to_clone_rusty_v8"}`
+     + ```v8 = {path ="path_to_clone_rusty_v8"}```
      + *path_to_clone_rusty_v8* is path to cloned & customed rusty v8.
        
  ### SpiderMonkey sample runner
@@ -136,9 +136,11 @@
   - Edit *Cargo.toml* to use custom build patch.
      + `cd path_to_clone/mozjs_integ`
      + Add follow lines in *Cargo.toml* under '[dependencies]'.
-     + `mozjs = {path ="path_to_clone_mozjs/rust-mozjs"}
-        [patch."https://github.com/servo/mozjs"]
-        mozjs_sys = { path = "path_to_clone_mozjs/mozjs" }`
+     + ```
+       mozjs = {path ="path_to_clone_mozjs/rust-mozjs"}
+       [patch."https://github.com/servo/mozjs"]
+       mozjs_sys = { path = "path_to_clone_mozjs/mozjs" }
+       ```
      + *path_to_clone_mozjs* is path to cloned & customed mozjs.
       
  ### JSC runner
@@ -146,3 +148,12 @@
   - Clone *jsc-integ* which is an sample runner.
      + `cd path_to_clone`
      + `git clone https://github.com/UsQuake/jsc_integ.git`
+       
+  - Edit *Cargo.toml* to use custom build patch.
+     + `cd path_to_clone/jsc_integ`
+     + Add follow lines in *Cargo.toml* under '[dependencies]'.
+     + ```
+       jscjs_sys = {path ="path_to_clone_jsc_sys"}
+       url = "2.4.0"
+       ```
+     + *path_to_clone_jsc_sys* is path to cloned & customed jsc_sys.
