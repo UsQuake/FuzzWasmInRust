@@ -120,13 +120,27 @@
   - Clone *v8-integ* which is an sample runner.
      + `cd path_to_clone`
      + `git clone https://github.com/UsQuake/v8_integ.git`
+
+  - Edit *Cargo.toml* to use custom build patch.
+     + `cd path_to_clone/v8_integ`
+     + Add follow line in *Cargo.toml* under '[dependencies]'.
+     + `v8 = {path ="path_to_clone_rusty_v8"}`
+     + *path_to_clone_rusty_v8* is path to cloned & customed rusty v8.
        
  ### SpiderMonkey sample runner
   
   - Clone *mozjs-integ* which is an sample runner.
      + `cd path_to_clone`
      + `git clone https://github.com/UsQuake/mozjs_integ.git`
-       
+
+  - Edit *Cargo.toml* to use custom build patch.
+     + `cd path_to_clone/mozjs_integ`
+     + Add follow lines in *Cargo.toml* under '[dependencies]'.
+     + `mozjs = {path ="path_to_clone_mozjs/rust-mozjs"}
+        [patch."https://github.com/servo/mozjs"]
+        mozjs_sys = { path = "path_to_clone_mozjs/mozjs" }`
+     + *path_to_clone_mozjs* is path to cloned & customed mozjs.
+      
  ### JSC runner
   
   - Clone *jsc-integ* which is an sample runner.
