@@ -7,9 +7,6 @@
     
   - We will support more environment after research experiment is done.
   
-  - Even though WSL is unsupported.
-    * Because of linux file-system is different per environment.
-  
   ## 1. Set AFL++ & LLVM.
 
   - For support AFL++ LLVM mode, get both llvm-15 and llvm-15-tools.
