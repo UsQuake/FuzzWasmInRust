@@ -26,7 +26,7 @@
      + For an example, I installed llvm-15 & llvm-15-tools and I'll use them.
      + `cd path_to_clone/AFLplusplus`
      + `export LLVM_CONFIG=llvm-config-15`
-     + `make distrib`
+     + `make`
       
   - Install compiled AFL++ with root permission.
      + `sudo make install`
@@ -36,7 +36,7 @@
      + `which afl-clang-fast`
    
   - Make an static library archive of afl-llvm-rt.o
-     + `ar libafl-rt.a afl-compiler-rt.o`
+     + `ar rcus libafl-rt.a afl-compiler-rt.o`
        
   - Make an symbolic-link of afl-clang-fast to hook clang/clang++ command.
      + `cd usr/local/bin`
