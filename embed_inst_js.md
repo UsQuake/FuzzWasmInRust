@@ -39,7 +39,7 @@
      + `ar rcus libafl-rt.a afl-compiler-rt.o`
        
   - Make an symbolic-link of afl-clang-fast to hook clang/clang++ command.
-     + `cd usr/local/bin`
+     + `cd /usr/local/bin`
      + `ln -s afl-clang-fast clang`
      + `ln -s afl-clang-fast++ clang++`
        
