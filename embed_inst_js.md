@@ -40,8 +40,8 @@
        
   - Make an symbolic-link of afl-clang-fast to hook clang/clang++ command.
      + `cd /usr/local/bin`
-     + `ln -s afl-clang-fast clang`
-     + `ln -s afl-clang-fast++ clang++`
+     + `sudo ln -s afl-clang-fast clang`
+     + `sudo ln -s afl-clang-fast++ clang++`
        
  - Make an hard-link(copy) of llvm-ar-15 to hook llvm-ar command.
      + `cd /usr/bin`
