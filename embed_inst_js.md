@@ -45,7 +45,7 @@
        
  - Make an hard-link(copy) of llvm-ar-15 to hook llvm-ar command.
      + `cd /usr/bin`
-     + `cp llvm-ar-15 /usr/local/bin/llvm-ar`
+     + `sudo cp llvm-ar-15 /usr/local/bin/llvm-ar`
        
   ## 2. Install and set build environment to build JS engine.
   
