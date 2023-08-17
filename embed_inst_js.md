@@ -61,7 +61,10 @@
   - Clone *mozjs* which is an Rust-FFI of SpiderMonkey static library.
      + `cd path_to_clone`
      + `git clone https://github.com/servo/mozjs.git`
-
+       
+  - Install build dependencies.
+     + `sudo apt install -y autoconf`
+       
   - Edit build script not to instrument glue code for rust to c++.
      + `cd path_to_clone/mozjs/rust-mozjs`
      + Under 15th line in *build.rs*, add follow line.
