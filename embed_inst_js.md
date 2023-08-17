@@ -3,7 +3,7 @@
 
   ## 0. Supported environment
   
-  - Now, x86 Ubuntu-22.02 only.
+  - Now, x86 Ubuntu-22.02(WSL2, container is ok) only.
     
   - We will support more environment after research experiment is done.
   
