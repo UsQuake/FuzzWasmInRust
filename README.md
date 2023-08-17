@@ -4,5 +4,5 @@
   - [For rust FFI](https://github.com/UsQuake/JSinRust/blob/main/embed_inst_js.md)
     
 ## Reference for design fuzzing algorithm
-  - [WebAssembly Vulnerability](https://kiss.kstudy.com/Detail/Ar?key=3921110)
+  - [Analysis of chromium wasm vulnerability](https://kiss.kstudy.com/Detail/Ar?key=3921110)
 
