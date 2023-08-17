@@ -54,6 +54,7 @@
         
   - Install build dependencies.
      + `sudo apt install -y libglib2.0-dev`
+     + `git submodule update --init --recursive`
 
   ### SpiderMonkey
   
@@ -83,29 +84,9 @@
 
      + Under 103th line in *build.rs*, add follow option.
      + `println!("cargo:rustc-link-lib=atomic");`
-       
-  ## 3. Set build option.
   
-  ### Common options.
-  
-  - *path_to_clone_AFL++* is path to clone AFLplusplus.
-  - `export AFL_PATH="path_to_clone_AFL++" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone_AFL++"`
 
-  ### V8
-  
-  - *path_to_python3* is path to Python3 executable.
-  - `export CLANG_BASE_PATH="/usr/local" V8_FROM_SOURCE=1 PYTHON="path_to_python3"`
-
-  ### MozJS
-  
-  - /usr/lib/x86_64-linux-gnu is path of libclang-version.so in Ubuntu-X86.
-  - `export CC="afl-clang-fast" CXX="afl-clang-fast++" LIBCLANG_PATH=/usr/lib/x86_64-linux-gnu`  
-     
-  ### JSC
-  
-  - Nothing to do. because, we already edit the makefile.
-
- ## 4. Clone and build own runners
+ ## 3. Build custom runners
 
  ### Write your own runner
 
@@ -113,7 +94,7 @@
  - Edit *Cargo.toml* of each runner to use your custom build of rusty JS engines.
      
  ### V8 sample runner
-  
+
   - Clone *v8-integ* which is an sample runner.
      + `cd path_to_clone`
      + `git clone https://github.com/UsQuake/v8_integ.git`
@@ -123,7 +104,12 @@
      + Add follow line in *Cargo.toml* under '[dependencies]'.
      + ```v8 = {path ="path_to_clone_rusty_v8"}```
      + *path_to_clone_rusty_v8* is path to cloned & customed rusty v8.
-
+       
+  - Set build options with environment variables.
+     + *path_to_python3* is path to Python3 executable.
+     + *path_to_clone_AFL++* is path to clone AFLplusplus.
+     + `export AFL_PATH="path_to_clone_AFL++" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone_AFL++" CLANG_BASE_PATH="/usr/local" V8_FROM_SOURCE=1 PYTHON="path_to_python3"`
+      
   - Finally, build runner.
      + `cargo build`
        
@@ -142,7 +128,11 @@
        mozjs_sys = { path = "path_to_clone_mozjs/mozjs" }
        ```
      + *path_to_clone_mozjs* is path to cloned & customed mozjs.
-       
+
+  - Set build options with environment variables.
+    + *path_to_clone_AFL++* is path to clone AFLplusplus.
+    + `export AFL_PATH="path_to_clone_AFL++" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone_AFL++" CC="afl-clang-fast" CXX="afl-clang-fast++" LIBCLANG_PATH=/usr/lib/x86_64-linux-gnu`
+      
   - Finally, build runner.
      + `cargo build`
          
@@ -161,5 +151,8 @@
        ```
      + *path_to_clone_jsc_sys* is path to cloned & customed jsc_sys.
 
+  - Set build options with environment variables.
+     + *path_to_clone_AFL++* is path to clone AFLplusplus.
+     + `export AFL_PATH="path_to_clone_AFL++" AFL_LLVM_INSTRUMENT="CLASSIC" RUSTFLAGS="-Ccodegen-units=1 -Clink-arg=-fuse-ld=gold -lafl-rt -Lpath_to_clone_AFL++"`
    - Finally, build runner.
      + `cargo build`
