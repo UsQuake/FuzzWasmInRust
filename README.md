@@ -8,6 +8,6 @@
 
   - [Analysis of chromium wasm vulnerability](https://kiss.kstudy.com/Detail/Ar?key=3921110)
   - [DIE framework for fuzzing JS](https://taesoo.kim/pubs/2020/park:die.pdf)
-  - [Fuzz wasm](https://i.blackhat.com/USA-22/Wednesday/US-22-Ventuzelo-A-Journey-Into-Fuzzing-WebAssembly-Virtual-Machines.pdf)
-  - []()
+  - [Fuzz wasm vm](https://i.blackhat.com/USA-22/Wednesday/US-22-Ventuzelo-A-Journey-Into-Fuzzing-WebAssembly-Virtual-Machines.pdf)
+  - [Fuzz wasm rust-vm](https://i.blackhat.com/USA-22/Wednesday/US-22-Hai-Is-WebAssembly-Really-Safe-wp.pdf)
 
