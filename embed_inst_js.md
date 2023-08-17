@@ -82,7 +82,10 @@
   - Clone WebKit *inside* of jsc-sys repo.
      + `cd path_to_clone/jsc-sys`
      + `git clone https://github.com/WebKit/WebKit.git`
-   
+       
+  - Install build dependencies.
+     + `sudo apt install -y ruby3.0`
+       
   - Edit build script.
     
      + Under 38th line in *makefile.cargo*, add follow option. (*path_to_python* is path to python binary.)
