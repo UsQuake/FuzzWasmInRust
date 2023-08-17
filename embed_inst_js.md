@@ -78,8 +78,8 @@
    
   - Edit build script.
     
-     + Under 55th line in *makefile.cargo*, add follow option. (*path_to_python* is path to python binary.)
-     + `-DPython_EXECUTABLE=path_to_python`
+     + Under 38th line in *makefile.cargo*, add follow option. (*path_to_python* is path to python binary.)
+     + `CMAKE_ARGS += " -DPython_EXECUTABLE=path_to_python"`
 
      + Under 103th line in *build.rs*, add follow option.
      + `println!("cargo:rustc-link-lib=atomic");`
