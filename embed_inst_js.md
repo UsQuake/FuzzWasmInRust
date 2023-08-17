@@ -36,7 +36,7 @@
      + `which afl-clang-fast`
    
   - Make an static library archive of afl-llvm-rt.o
-     + `ar libafl-rt.a afl-llvm-rt.o`
+     + `ar libafl-rt.a afl-compiler-rt.o`
        
   - Make an symbolic-link of afl-clang-fast to hook clang/clang++ command.
      + `cd usr/local/bin`
