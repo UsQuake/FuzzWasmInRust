@@ -64,7 +64,7 @@
   - Edit build script not to instrument glue code for rust to c++.
      + `cd path_to_clone/mozjs/rust-mozjs`
      + Under 15th line in *build.rs*, add follow line.
-     + `.compile(clang++-15)`
+     + `.compiler(clang++-15)`
     
   ### JavascriptCore
   
