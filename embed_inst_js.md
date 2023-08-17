@@ -69,6 +69,9 @@
      + `cd path_to_clone/mozjs/rust-mozjs`
      + Under 15th line in *build.rs*, add follow line.
      + `build.compiler("clang++-15");`
+     + `cd path_to_clone/mozjs/mozjs`
+     + Under 235th line in *build.rs*, add follow line.
+     + `.compiler("clang++-15")`
     
   ### JavascriptCore
   
