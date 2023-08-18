@@ -10,7 +10,7 @@
   ## 1. Set AFL++ & LLVM.
 
   - For support AFL++ LLVM mode, get both llvm-15 and llvm-15-tools.
-    + `sudo apt-get install -y llvm-15 llvm-15-tools clang-15 lld-15`
+    + `sudo apt-get install -y llvm-15 llvm-15-tools clang-15 lld-15 build-essential`
     + Why use 15? 
       * Because llvm-15 is current version of llvm in Ubuntu-22.0.2 and you can use amazing features of AFL++ with current llvm.
     + If new version of llvm is coming out, You can consider new version. 
