@@ -63,7 +63,7 @@
      + `git clone https://github.com/servo/mozjs.git`
        
   - Install build dependencies.
-     + `sudo apt install -y autoconf pkg-config zlib`
+     + `sudo apt install -y autoconf pkg-config`
        
   - Edit build script not to instrument glue code for rust to c++.
      + `cd path_to_clone/mozjs/rust-mozjs`
