@@ -19,8 +19,8 @@ RUN cp llvm-ar-15 /usr/local/bin/llvm-ar
 WORKDIR /home/root
 RUN git clone https://github.com/UsQuake/jsc-sys.git
 WORKDIR /home/root/jsc-sys
-RUN patch -p0 < jsc-sys_makefile.patch
-RUN patch -p0 < jsc-sys_build-script.patch
+RUN patch -p0 < jsc_makefile.patch
+RUN patch -p0 < jsc_build-script.patch
 RUN git clone https://github.com/WebKit/WebKit.git
 WORKDIR /home/root
 RUN git clone https://UsQuake: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@github.com/UsQuake/jsc_integ.git
