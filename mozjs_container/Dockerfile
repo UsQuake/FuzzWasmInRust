@@ -1,4 +1,4 @@
- #For MozJS(SpiderMonkey) AFL instrumented Rust-FFI
+#For MozJS(SpiderMonkey) AFL instrumented Rust-FFI
 FROM ubuntu:22.04
 RUN \
       apt-get update && \
