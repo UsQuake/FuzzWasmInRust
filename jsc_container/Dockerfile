@@ -1,9 +1,10 @@
- #For JSC AFL instrumented Rust-FFI
+#For JSC AFL instrumented Rust-FFI
 FROM ubuntu:22.04
 RUN \
       apt-get update && \
-      apt-get install -y llvm-15 llvm-15-tools clang-15 lld-15\
-      build-essential libglib2.0-dev python3 ruby3.0 git cargo
+      apt-get install -y llvm-15 llvm-15-tools clang-15 lld-15 \
+      build-essential libglib2.0-dev python3 ruby3.0 git cargo \
+      cmake ninja-build python-is-python3
 WORKDIR /home/root/
 RUN git clone https://github.com/AFLplusplus/AFLplusplus.git
 WORKDIR /home/root/AFLplusplus
