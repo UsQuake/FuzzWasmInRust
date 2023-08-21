@@ -1,4 +1,4 @@
- #For V8 AFL instrumentaed Rust-FFI
+#For V8 AFL instrumentaed Rust-FFI
 FROM ubuntu:22.04
 RUN \
       apt-get update && \
