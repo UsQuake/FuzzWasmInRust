@@ -21,8 +21,6 @@
 
  ### 2. Let's check whether setting of environment is done.
   
-  - Belows are built images.
-
   - Test afl-v8 rust-ffi is working.
      
      + `docker run -it v8_afl_inst_rust_ffi_image:latest`
