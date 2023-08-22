@@ -1,6 +1,6 @@
 ## Using instrumented javascript engines in container environment
     
-  ### 1. Build an image with Docker
+ ### 1. Build an image with Docker
   
   - Belows are dockerfile of each js engine.
     + [AFL-JSC rust-FFI env](https://github.com/UsQuake/JSinRust/blob/main/jsc_container)
@@ -19,6 +19,6 @@
     + `docker build -t v8_afl_inst_rust_ffi_image v8_container`
     + `docker build -t spider_monkey_afl_inst_rust_ffi_image mozjs_container`
 
-  ### 2. Check whether envinronment setting is done.
+ ### 2. Check whether envinronment setting is done.
   
   - Check whether envinronment setting is done.
