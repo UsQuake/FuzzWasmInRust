@@ -26,9 +26,32 @@
   - Run v8 image with anonymous container by below commands.
      
      + `docker run -it v8_afl_inst_rust_ffi_image:latest`
-     + `git clone` 
-     + 
-     + `docker run -it spider_monkey_afl_inst_rust_ffi_image:latest`
-     + `docker run -it jsc_afl_inst_rust_ffi_image:latest`
+     + `cd /home/root`
+     + `git clone https://github.com/UsQuake/wasm_fuzz_driver.git` 
+     +  Do authentication...
+     + `cd wasm_fuzz_driver`
+     + `cargo run ../v8_integ/target/release/v8_integ`
+     +  See coverage raw data per byte. *v8_integ* is v8-afl-sample-runner.
+     + `../v8_integ/target/release/v8_integ`
 
-    
+  - Run spider-monkey image with anonymous container by below commands.
+     
+     + `docker run -it spider_monkey_afl_inst_rust_ffi_image:latest`
+     + `cd /home/root`
+     + `git clone https://github.com/UsQuake/wasm_fuzz_driver.git` 
+     +  Do authentication...
+     + `cd wasm_fuzz_driver`
+     + `cargo run ../mozjs_integ/target/release/mozjs_integ`
+     +  See coverage raw data per byte. *mozjs_integ* is mozjs(spidermonkey rust ffi)-afl-sample-runner.
+     + `../mozjs_integ/target/release/mozjs_integ`
+       
+  - Run jsc image with anonymous container by below commands.
+     
+     + `docker run -it jsc_afl_inst_rust_ffi_image:latest`
+     + `cd /home/root`
+     + `git clone https://github.com/UsQuake/wasm_fuzz_driver.git` 
+     +  Do authentication...
+     + `cd wasm_fuzz_driver`
+     + `cargo run ../jsc_integ/target/release/jsc_integ`
+     +  See coverage raw data per byte. *jsc_integ* is jsc-afl-sample-runner.
+     + `../jsc_integ/target/release/jsc_integ`
