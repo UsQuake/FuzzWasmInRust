@@ -7,10 +7,10 @@
     + [AFL-SpiderMonkey rust-FFI env](https://github.com/UsQuake/JSinRust/blob/main/mozjs_container)
     + [AFL-V8 rust-FFI env](https://github.com/UsQuake/JSinRust/blob/main/v8_container)
       
-  - Clone this git(https://github.com/UsQuake/FuzzWasmInRust).
+  - Clone this git(https://github.com/UsQuake/FuzzWasmInRust.git).
        
     + `cd path_to_clone_this_git`
-    + `git clone https://github.com/UsQuake/FuzzWasmInRust`
+    + `git clone https://github.com/UsQuake/FuzzWasmInRust.git`
       
   - Build an image with each dockerfile in cloned repo.
        
