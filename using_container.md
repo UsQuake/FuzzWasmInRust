@@ -19,11 +19,11 @@
     + `docker build -t v8_afl_inst_rust_ffi_image v8_container`
     + `docker build -t spider_monkey_afl_inst_rust_ffi_image mozjs_container`
 
- ### 2. Let's check whether environment setting is done.
+ ### 2. Let's check whether setting of environment is done.
   
   - Belows are built images.
 
-  - Run v8 image with anonymous container by below commands.
+  - Test afl-v8 rust-ffi is working.
      
      + `docker run -it v8_afl_inst_rust_ffi_image:latest`
      + `cd /home/root`
@@ -34,7 +34,7 @@
      +  See coverage raw data per byte. *v8_integ* is v8-afl-sample-runner.
      + `../v8_integ/target/release/v8_integ`
 
-  - Run spider-monkey image with anonymous container by below commands.
+  - Test afl-spider-monkey rust-ffi is working.
      
      + `docker run -it spider_monkey_afl_inst_rust_ffi_image:latest`
      + `cd /home/root`
@@ -45,7 +45,7 @@
      +  See coverage raw data per byte. *mozjs_integ* is mozjs(spidermonkey rust ffi)-afl-sample-runner.
      + `../mozjs_integ/target/release/mozjs_integ`
        
-  - Run jsc image with anonymous container by below commands.
+  - Test afl-jsc rust-ffi is working.
      
      + `docker run -it jsc_afl_inst_rust_ffi_image:latest`
      + `cd /home/root`
