@@ -4,9 +4,7 @@
 
   - [Manual setting](https://github.com/UsQuake/JSinRust/blob/main/embed_inst_js.md)
   - [Using dockerfiles]
-    + [AFL-JSC rust-FFI env](https://github.com/UsQuake/JSinRust/blob/main/jsc_container)
-    + [AFL-SpiderMonkey rust-FFI env](https://github.com/UsQuake/JSinRust/blob/main/mozjs_container)
-    + [AFL-V8 rust-FFI env](https://github.com/UsQuake/JSinRust/blob/main/v8_container)
+
       
 ## Reference for design fuzzing algorithm
 
