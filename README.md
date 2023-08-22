@@ -2,8 +2,8 @@
 
 ## Instrument each JS engine in named browsers.
 
-  - [Manual setting](https://github.com/UsQuake/JSinRust/blob/main/embed_inst_js.md)
-  - [Using dockerfiles]
+  - [Manual setting in Ubuntu-22.04-x86/64](https://github.com/UsQuake/JSinRust/blob/main/embed_inst_js.md)
+  - [Using dockerfiles](https://github.com/UsQuake/FuzzWasmInRust/blob/main/using_container.md)
 
       
 ## Reference for design fuzzing algorithm
