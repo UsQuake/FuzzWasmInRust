@@ -19,6 +19,16 @@
     + `docker build -t v8_afl_inst_rust_ffi_image v8_container`
     + `docker build -t spider_monkey_afl_inst_rust_ffi_image mozjs_container`
 
- ### 2. Check whether envinronment setting is done.
+ ### 2. Let's check whether environment setting is done.
   
-  - Check whether envinronment setting is done.
+  - Belows are built images.
+
+  - Run v8 image with anonymous container by below commands.
+     
+     + `docker run -it v8_afl_inst_rust_ffi_image:latest`
+     + `git clone` 
+     + 
+     + `docker run -it spider_monkey_afl_inst_rust_ffi_image:latest`
+     + `docker run -it jsc_afl_inst_rust_ffi_image:latest`
+
+    
