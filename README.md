@@ -13,3 +13,6 @@
   - [Fuzzing wasi & browsers](https://i.blackhat.com/USA-22/Wednesday/US-22-Ventuzelo-A-Journey-Into-Fuzzing-WebAssembly-Virtual-Machines.pdf)
   - [Fuzzing wasi](https://i.blackhat.com/USA-22/Wednesday/US-22-Hai-Is-WebAssembly-Really-Safe-wp.pdf)
 
+## Fuzzing harness design
+
+  - ![WASM_fuzzing_engine](https://github.com/UsQuake/FuzzWasmInRust/assets/24998577/61d02b69-b0d2-42f2-9979-86fe9eaac694)
