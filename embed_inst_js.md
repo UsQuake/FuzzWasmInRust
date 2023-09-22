@@ -40,9 +40,11 @@
      + `sudo ln -s afl-clang-fast clang`
      + `sudo ln -s afl-clang-fast++ clang++`
        
- - Make an hard-link(copy) of llvm-ar-15 to hook llvm-ar command.
+ - Make an hard-link(copy) of llvm-ar-15, llvm-readelf-15, llvm-nm-15 to hook llvm-tools' command.
      + `cd /usr/bin`
      + `sudo cp llvm-ar-15 /usr/local/bin/llvm-ar`
+     + `sudo cp llvm-readelf-15 /usr/local/bin/llvm-readelf`
+     + `sudo cp llvm-nm-15 /usr/local/bin/llvm-nm`
        
   ## 2. Install and set build environment to build JS engine.
   
