@@ -13,17 +13,20 @@ In case of building executable binary directly with afl-clang-fast, afl-showmap 
 **To Reproduce**
 Steps to reproduce the behavior:
 1. Clone the AFLplusplus
-2. Open AFLplusplus repository folder and build. ->`make` , `make install`
-3. In the repository folder, `ar rcus libafl-rt.a afl-compiler-rt.o`
-4. Clone *tiny-js* git.
+2. Open *AFLplusplus repository folder* and build. ->`make` , `make install`
+3. In *the repository folder*, `ar rcus libafl-rt.a afl-compiler-rt.o`
+4. Clone *tiny-js* git **outside** of *the AFLplusplus repository folder*.
 5. Set compiler with `export CC=afl-clang-fast` and `export CXX=afl-clang-fast++`.
-6. Open cloned *tiny-js* repository folder and "cmake -S . -B build" to make a Makefile & build directory.
-7. Open tiny-js/build folder and Instrument with `make tiny-js`
+6. Open cloned *tiny-js* repository folder and `cmake -S . -B build` to make a Makefile & build directory.
+7. Open tiny-js/build folder and Instrument static library with `make tiny-js`
 8. Copy libafl-rt.a from AFLplusplus repository folder to tiny-js/build folder.
-9. 
+9. Make dummy cpp file to make executable binary to test instrumented static library.
+10. Code is
+   C++```
+   ```
 
 **Expected behavior**
-I want 0 bitmap not the error emission.
+I expect the message that "0 bitmaps captured" not error message.
 
 **Screen output/Screenshots**
 
@@ -34,4 +37,8 @@ result is below..
 
 
 **Additional context**
-Add any other context about the problem here.
+
+You can say that "Why don't you instrument executable binary source code directly?".
+Yes, I know, But I want to instrument only static library, not with shell executable like *d8, jsc,..etc*
+Also, I should use partial instrumentation for testing specific features on javascript engines..
+Plz.. Plz.. help me..
