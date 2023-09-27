@@ -6,7 +6,7 @@
 Thank you for making AFL++ better!
 
 **Describe the bug**
-When I instrument static library with AFL_LLVM_ALLOWLIST, 
+When I instrument static library with AFL_LLVM_ALLOWLIST and ALLOWLIST is not matched with source directory,
 If AFL can't capture any bitmap in instrumented static library, afl-showmap emits error message not the message that "0 bitmaps captured". 
 In case of building executable binary directly with afl-clang-fast, afl-showmap emits the message that "0 bitmaps captured", not like static library one's.
 
