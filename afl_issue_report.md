@@ -21,8 +21,14 @@ Steps to reproduce the behavior:
 7. Open tiny-js/build folder and Instrument static library with `make tiny-js`
 8. Copy libafl-rt.a from AFLplusplus repository folder to tiny-js/build folder.
 9. Make dummy cpp file to make executable binary to test instrumented static library.
-Code is
     ``` C++
+       // Assume name of this dummy file is lib_test.cpp
+       // and this file should be in tiny-js repository folder directly,
+       //not in build folder or another sub directory.
+       // Compile this dummy code with 
+       // clang++ -o lib_test.o -c lib_test.cpp
+       // Finally, link object file of this dummy code ,libtiny-js.a and libafl-rt.a.
+       // clang++ -o lib_binary lib_test.o -Lpath/to/tiny-js/build -ltiny-js -lafl-rt  
       #include "TinyJS.h"
       #include "TinyJS_Functions.h"
       #include <assert.h>
@@ -74,7 +80,9 @@ Code is
    ```
 
 **Expected behavior**
-I expect the message that "0 bitmaps captured" not error message.
+
+With afl-showmap,
+I expect the message that "0 bitmaps captured" not error message
 
 **Screen output/Screenshots**
 
@@ -89,4 +97,3 @@ result is below..
 You can say that "Why don't you instrument executable binary source code directly?".
 Yes, I know, But I want to instrument only static library, not with shell executable like *d8, jsc,..etc*
 Also, I should use partial instrumentation for testing specific features on javascript engines..
-Plz.. Plz.. help me..
