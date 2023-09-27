@@ -13,7 +13,7 @@ In case of building executable binary directly with afl-clang-fast, afl-showmap 
 **To Reproduce**
 Steps to reproduce the behavior:
 1. Clone the AFLplusplus
-2. Open AFLplusplus repository folder and build. ->`make', `make install`
+2. Open AFLplusplus repository folder and build. ->`make` , `make install`
 3. In the repository folder, `ar rcus libafl-rt.a afl-compiler-rt.o`
 4. Clone *tiny-js* git.
 5. Set compiler with `export CC=afl-clang-fast` and `export CXX=afl-clang-fast++`.
