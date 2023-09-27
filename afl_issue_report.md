@@ -21,39 +21,10 @@ Steps to reproduce the behavior:
 7. Open tiny-js/build folder and Instrument static library with `make tiny-js`
 8. Copy libafl-rt.a from AFLplusplus repository folder to tiny-js/build folder.
 9. Make dummy cpp file to make executable binary to test instrumented static library.
-10. Code is
-   C++```
+Code is
+    ```C++
 /*
- * TinyJS
- *
- * A single-file Javascript-alike engine
- *
- * Authored By Gordon Williams <gw@pur3.co.uk>
- *
- * Copyright (C) 2009 Pur3 Ltd
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of
- * this software and associated documentation files (the "Software"), to deal in
- * the Software without restriction, including without limitation the rights to
- * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
- * of the Software, and to permit persons to whom the Software is furnished to do
- * so, subject to the following conditions:
-
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
-
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
-/*
- * This is a simple program showing how to use TinyJS
- */
+ * lib_test.cpp
 
 #include "TinyJS.h"
 #include "TinyJS_Functions.h"
@@ -108,8 +79,7 @@ int main(int argc, char **argv)
 #endif
   return 0;
 }
-
-   ```
+```
 
 **Expected behavior**
 I expect the message that "0 bitmaps captured" not error message.
