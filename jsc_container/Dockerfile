@@ -17,6 +17,8 @@ RUN ln -s afl-clang-fast clang
 RUN ln -s afl-clang-fast++ clang++
 WORKDIR /usr/bin
 RUN cp llvm-ar-15 /usr/local/bin/llvm-ar
+RUN cp llvm-readelf-15 /usr/local/bin/llvm-readelf
+RUN cp llvm-nm-15 /usr/local/bin/llvm-nm
 WORKDIR /home/root
 RUN git clone https://github.com/UsQuake/jsc-sys.git
 WORKDIR /home/root/jsc-sys
