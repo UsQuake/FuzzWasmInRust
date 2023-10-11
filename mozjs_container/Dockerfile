@@ -15,6 +15,8 @@ RUN ar rcus libafl-rt.a afl-compiler-rt.o
 WORKDIR /usr/local/bin
 WORKDIR /usr/bin
 RUN cp llvm-ar-15 /usr/local/bin/llvm-ar
+RUN cp llvm-readelf-15 /usr/local/bin/llvm-readelf
+RUN cp llvm-nm-15 /usr/local/bin/llvm-nm
 WORKDIR /home/root
 RUN git clone https://github.com/UsQuake/mozjs.git
 WORKDIR /home/root/mozjs/mozjs
