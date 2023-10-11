@@ -19,11 +19,6 @@ RUN cp llvm-readelf-15 /usr/local/bin/llvm-readelf
 RUN cp llvm-nm-15 /usr/local/bin/llvm-nm
 WORKDIR /home/root
 RUN git clone https://github.com/UsQuake/mozjs.git
-WORKDIR /home/root/mozjs/mozjs
-RUN patch -p0 < mozjs_no_instrument.patch
-WORKDIR /home/root/mozjs/rust-mozjs
-RUN patch -l -p0 < rust-mozjs_no_instrument.patch
-WORKDIR /home/root
 RUN git clone https://UsQuake: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@github.com/UsQuake/mozjs_integ.git
 WORKDIR /home/root/mozjs_integ
 ENV AFL_PATH "/home/root/AFLplusplus"
